@@ -1,17 +1,16 @@
 /*****************************************************************
 File:          BM25S2021-1.cpp
-Author:        BESTMODULES
+Author:        BEST MODULES CORP.
 Description:   The sensor with IIC and obtain the corresponding value
-History：         
-V1.0.1   -- initial version；2023-03-03；Arduino IDE :v1.8.15
+Version:       V1.0.2   -- 2025-06-30
 ******************************************************************/
 #include "BM25S2021-1.h"
 
 /**********************************************************
 Description: Constructor
 Parameters:  *twotheWire: &Wire or &Wire1 or &Wire2
-Return:  
-Others:      
+Return:  None
+Others:  None     
 **********************************************************/
 BM25S2021_1::BM25S2021_1(TwoWire *theWire)
 {
@@ -20,8 +19,8 @@ BM25S2021_1::BM25S2021_1(TwoWire *theWire)
 /**********************************************************
 Description: Constructor
 Parameters:  datapin: As a pin for transmitting data 
-Return:   
-Others:      
+Return:  None
+Others:  None    
 **********************************************************/
 BM25S2021_1::BM25S2021_1(uint8_t datapin)
 {
@@ -30,9 +29,9 @@ BM25S2021_1::BM25S2021_1(uint8_t datapin)
 }
 /**********************************************************
 Description: BM25S2021_1 initial
-Parameters:
-Return:    void
-Others:      
+Parameters: void
+Return:     void
+Others:     None 
 **********************************************************/
 void BM25S2021_1::begin()
 {
@@ -48,7 +47,7 @@ Description: readTemperature
 Parameters:  isFahrenheit = true:Fahrenheit degree
              isFahrenheit = false:centigrade(default)
 Return:      temperature , unit:℃（default） or  ℉ 
-Others:      
+Others:      None
 **********************************************************/
 float BM25S2021_1::readTemperature(bool isFahrenheit)
 {
@@ -105,9 +104,9 @@ float BM25S2021_1::readTemperature(bool isFahrenheit)
 
 /**********************************************************
 Description: readHumidity
-Parameters:
+Parameters:  void
 Return:      humidity
-Others:      
+Others:      None
 **********************************************************/
 float BM25S2021_1::readHumidity()
 {
@@ -150,9 +149,9 @@ float BM25S2021_1::readHumidity()
 
 /**********************************************************
 Description: Get device Ver
-Parameters:       
+Parameters:  void     
 Return:      Ver       
-Others:      
+Others:      None 
 **********************************************************/
 uint8_t BM25S2021_1::getFWVer()
 {
@@ -169,9 +168,9 @@ uint8_t BM25S2021_1::getFWVer()
 
 /**********************************************************
 Description: Get device PID
-Parameters:       
+Parameters:  void     
 Return:      PID       
-Others:      
+Others:      None
 **********************************************************/
 uint16_t BM25S2021_1::getPID()
 {
@@ -188,9 +187,9 @@ uint16_t BM25S2021_1::getPID()
 
 /**********************************************************
 Description: Get device SN
-Parameters:       
+Parameters:  void     
 Return:      SN       
-Others:      
+Others:      None
 **********************************************************/
 uint32_t BM25S2021_1::getSN()
 {
@@ -209,7 +208,7 @@ uint32_t BM25S2021_1::getSN()
 Description: read Temperature RawData
 Parameters:  rawTemperature:Variables for storing temperature RawData
 Return:      temperature Raw Data(uint16_t)       
-Others:      
+Others:      None
 **********************************************************/
 uint16_t BM25S2021_1::readRawTemperature()
 {
@@ -256,7 +255,7 @@ Description: read Humidity RawData
 Parameters:  rawHumidity:Variables for storing humidity  Rawdata
 Output:      humidity  Raw data(uint16_t)
 Return:      READ_OK / READ_ERROR       
-Others:      
+Others:      None
 **********************************************************/
 uint16_t BM25S2021_1::readRawHumidity()
 {
@@ -297,9 +296,9 @@ uint16_t BM25S2021_1::readRawHumidity()
 
 /**********************************************************
 Description: Clear data buff
-Parameters:  
+Parameters:  void
 Return:    void 
-Others:      
+Others:    None  
 **********************************************************/
 void BM25S2021_1::clearBuff()
 {
@@ -324,7 +323,7 @@ Description: writeData
 Parameters:  wbuf:Variables for storing Data to be sent
              wlen:Length of data sent
 Return:    void
-Others:      
+Others:    None  
 **********************************************************/
 void BM25S2021_1::writeBytes(uint8_t wbuf[], uint8_t wlen)
 {
@@ -344,7 +343,7 @@ Description: readData
 Parameters:  rbuf:Variables for storing Data to be obtained
              rlen:Length of data to be obtained
 Return:      READ_OK/READ_ERROR  
-Others:      
+Others:      None
 **********************************************************/
 uint8_t BM25S2021_1::readBytes(uint8_t rbuf[], uint8_t rlen)
 {
@@ -374,7 +373,7 @@ Description: CRC Correction
 Parameters:  *buff：Data obtained through IIC
               len ：Gets the total length of the data
 Return:      Checksum calculate by CRC-16
-Others:      
+Others:      None
 **********************************************************/
 uint8_t BM25S2021_1::cheackCRC(uint8_t *buff,uint8_t len)
 {
@@ -401,9 +400,9 @@ uint8_t BM25S2021_1::cheackCRC(uint8_t *buff,uint8_t len)
 }
 /**********************************************************
 Description: readOneWireData
-Parameters:  
+Parameters:  void
 Return:      READ_OK/ERROR_TIMEOUT
-Others:      
+Others:      None
 **********************************************************/
 uint8_t BM25S2021_1::readOneWireData()
 {
@@ -467,7 +466,7 @@ uint8_t BM25S2021_1::readOneWireData()
 Description: check Sum
 Parameters:  pin : ONEWIRE data pin
 Return:      READ_OK/ERROR_CHECKSUM   
-Others:      
+Others:      None
 **********************************************************/
 int BM25S2021_1::checkSum()
 {

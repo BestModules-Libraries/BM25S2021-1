@@ -5,7 +5,7 @@
 BM25S2021-1
 ===========================================================
 
-The BEST MODULES BM25S2021-1 is a temperature and humidity digital sensor, which uses the I2C or the One-wire communication method. This document provides the description of the BM25S2021-1 Arduino Lib functions and how to install the Arduino Lib. The example demonstrates the function of reading the temperature and humidity values with the BME33M251.
+The BEST MODULES BM25S2021-1 is a temperature and humidity digital sensor, which uses the I2C or the One-wire communication method. This document provides the description of the BM25S2021-1 Arduino Lib functions and how to install the Arduino Lib. The example demonstrates the function of reading the temperature and humidity values with the BME33M251/BME33M251A.
 
 #### Applicable types:
 <div align=center>
@@ -13,7 +13,8 @@ The BEST MODULES BM25S2021-1 is a temperature and humidity digital sensor, which
 |Part No.   |Description                             |
 |:---------:|:--------------------------------------:|
 |BM25S2021-1 |Temperature and humidity digital sensor|
-|BME33M251  |Integrated BM25S2021-1 sensor           |
+|BME33M251   |Integrated BM25S2021-1 sensor           |
+|BME33M251A  |Integrated BM25S2021-1 sensor           |
 
 </div> 
 
@@ -30,12 +31,15 @@ Repository Contents
 Documentation 
 -------------------
 
-* **[BM25S2021-1 Arduino Library V1.0.1 Description v100](https://www.bestmodulescorp.com/bm25s2021-1.html#tab-product2)** - Arduino Library Description.
+* **[BM25S2021-1 Arduino Library Description](https://www.bestmodulescorp.com/bm25s2021-1.html)** - Arduino Library Description.
 
 Version History  
 -------------------
 
-* **V1.0.1** - Initial public release.
+* **V1.0.1**  
+&emsp;&emsp;- Initial public release.
+* **V1.0.2**  
+&emsp;&emsp;- Add applicable models: BME33M251A; 
 
 License Information
 -------------------
@@ -44,8 +48,8 @@ This product is _**open source**_!
 
 Please review the LICENSE.md file for license information. 
 
-If you have any questions or concerns on licensing, please contact technical support on our BESTMODULES Email:service@bestmodulescorp.com.
+If you have any questions or concerns on licensing, please contact technical support on our BEST MODULES CORP. Email:service@bestmodulescorp.com.
 
 Distributed as-is; no warranty is given.
 
-BESTMODULES
+BEST MODULES CORP.
